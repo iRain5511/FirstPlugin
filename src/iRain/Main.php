@@ -31,4 +31,5 @@ class Main extends PluginBase{
             $inv->addItem($item);
             return true;
         }
+    }
 }  
