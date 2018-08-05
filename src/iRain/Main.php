@@ -19,7 +19,7 @@ class Main extends PluginBase{
         $this->getLogger()->Info("This Plugin Has Been Disabled");
     }
         
-    public function onCommand(CommandSender $sender, pocketmine\command\Command $command, string $label, array $args): bool
+    public function onCommand(pocketmine\command\CommandSender $sender, pocketmine\command\Command $command, string $label, array $args): bool{
         if($sender instanceof Player){
             switch($command->getName()){
                 case "iraindrop":
