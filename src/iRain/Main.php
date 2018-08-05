@@ -20,7 +20,7 @@ class Main extends PluginBase{
         
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
         switch($command->getName()){
-            case "testercommand":
+            $this->getServer()->getCommandMap()->dispatch($player, "tttt"); 
             $sender->sendMessage("Item is now in your Inventory!");
             $name = $sender->getName();
             $sender->addTitle("Hi " . $name);
