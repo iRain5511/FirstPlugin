@@ -12,7 +12,7 @@ use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
 
-    public $prefix = C::YELLOW."TEST".C::DARK_GRAY." >"xC::WHITE."";
+    public $prefix = C::YELLOW."TEST".C::DARK_GRAY." >"::WHITE."";
 
     public function onLoad(){
         $this->getLogger()->info($this->prefix."IDK"
