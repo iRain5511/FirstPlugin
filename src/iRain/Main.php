@@ -29,9 +29,6 @@ class Main extends PluginBase{
                 $item->setCustomName("Okie");
                 $item->setLore("Okie");
                 $inv->addItem($item);
-            }else{
-                $sender->sendMessage("Please Use This Command In Game Please");
-                return true;
             }
         }
     }
