@@ -11,7 +11,7 @@ use pocketmine\item\Item;
 
 class Main extends PluginBase{
         
-    public function onEnable (){
+    public function onEnable(){
         $this->getLogger()->Info("This Plugin Has Been Enabled");
     }
         
