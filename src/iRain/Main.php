@@ -17,8 +17,11 @@ class Main extends PluginBase{
     }
         
     public function onDisable(){
-        $this->getLogger()->Info("This Plugin Has Been Disabled");
-            
+        $this->getLogger()->Info("This Plugin Has Been Disabled");        
+    }
+        
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
+            return false;
     }
         
 }
