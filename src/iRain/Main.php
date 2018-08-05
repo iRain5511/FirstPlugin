@@ -30,7 +30,6 @@ class Main extends PluginBase{
         }else{
             $sender->sendMessage("Please Use This Command In Game Please");
             return true;
-            }
         }
     }
 }                      
