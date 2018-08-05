@@ -18,10 +18,6 @@ class Main extends PluginBase{
         
     public function onDisable(){
         $this->getLogger()->Info("This Plugin Has Been Disabled");
-    }
-            }
-                
-        }
             
     }
         
