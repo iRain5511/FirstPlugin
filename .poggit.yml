@@ -1,0 +1,7 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/iRain5511/FirstPlugin
+branches:
+- master
+projects:
+  FirstPlugin:
+    path: ""
+...
