@@ -20,8 +20,10 @@ class Main extends PluginBase{
     }
         
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+            return false;
+    }
         if($sender instanceof Player){
-            switch($cmd->getName()){
+            switch($command->getName()){
                 case "iraindrop":
                 $sender->addTitle("Oof");
                 $item = Item::get(278,0,1);
