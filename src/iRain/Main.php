@@ -4,7 +4,7 @@ namespace iRain;
 
 use pocketmine\plugin\PluginBase;
 
-class iRain extends PluginBase{
+class Main extends PluginBase{
 
         public function onLoad(){
                 $this->getLogger()->info("onLoad() has been called!");
