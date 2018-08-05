@@ -27,6 +27,7 @@ class Main extends PluginBase{
                 $item = Item::get(278,0,1);
                 $inv = $sender->getInventory();
                 $item->setCustomName("Okie");
+                $item->setLore("Okie");
                 $inv->addItem($item);
             }else{
                 $sender->sendMessage("Please Use This Command In Game Please");
