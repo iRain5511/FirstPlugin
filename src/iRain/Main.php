@@ -2,12 +2,12 @@
 
 namespace iRain;
 
-use pocketmine\plugin\PluginBase
-use pocketmine\event\Listener
-use pocketmine\Player
-use pocketmine\Server
-use pocketmine\command\CommandSender
-use pocketmine\command\Command
+use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
+use pocketmine\Player;
+use pocketmine\Server;
+use pocketmine\command\CommandSender;
+use pocketmine\command\Command;
 use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase implements Listener {
