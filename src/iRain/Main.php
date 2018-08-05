@@ -21,7 +21,14 @@ class Main extends PluginBase{
     }
         
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
-            return false;
-    }
-        
+        switch($command->getName())
+            case "ok":
+            $sender->sendMessage("Item is now in your Inventory!");
+            $name = $sender->getName();
+            $sender->addTitle("Hi " . $name);
+            $item = Item::get(1,0,64);
+            $inv = $sender->genInventory();
+            $inv->addItem($item);
+            return true;
+        }
 }
