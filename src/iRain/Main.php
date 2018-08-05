@@ -11,7 +11,7 @@ use pocketmine\item\Item;
 
 class Main extends PluginBase{
         
-    public function onEnable(){
+    public function onEnable (){
         $this->getLogger()->Info("This Plugin Has Been Enabled");
     }
         
@@ -21,15 +21,17 @@ class Main extends PluginBase{
         
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args){
         if($sender instanceof Player)(
-            case "iraindrop":
-            $sender->addTitle("Oof");
-            $item = Item::get(278,0,1);
-            $inv = $sender->getInventory();
-            $item->setCustomName("Okie");
-            $inv->addItem($item);
-        }else{
-            $sender->sendMessage("Please Use This Command In Game Please");
-            return true;
+            switch($cmd->getName())(
+                case "iraindrop":
+                $sender->addTitle("Oof");
+                $item = Item::get(278,0,1);
+                $inv = $sender->getInventory();
+                $item->setCustomName("Okie");
+                $inv->addItem($item);
+            }else{
+                $sender->sendMessage("Please Use This Command In Game Please");
+                return true;
+            }
         }
     }
-}                      
+}                    
