@@ -30,6 +30,5 @@ class Main extends PluginBase{
                 $item->setLore("Okie");
                 $inv->addItem($item);
             }
+                
         }
-    }
-}                    
