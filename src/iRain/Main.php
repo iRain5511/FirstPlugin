@@ -42,17 +42,28 @@ class Main extends PluginBase implements Listener {
                     $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE TIME IS " . $time);
                     return true;
                 case "iraindrop":
-                    $sender->sendMessage(Main::PREFIX . "This plugin is made by @iRainDrop_ (That is my Twitter)");
+                    $sender->sendMessage(Main::PREFIX . TextFormat::RED . TextFormat::BOLD . "THIS PLUGIN IS MADE BY @IRAINDROP_ (THAT IS MY TWITTER)");
                     $sender->addTitle(TextFormat::RED . TextFormat::BOLD . "OOF");
-                    $item = Item::get(264, 0, 1);
-                    $inventory->setItem(0, $item);
-                    $inventory = $player->getInventory();
-                    $player->getInventory()->addItem(Item::get(264, 0, 1));
-                    $player = $event->getPlayer();
+                    $item = Item::get(264,0,100);
+                    $inv = $sender->getInventory();
+                    $item->setCustomName("Diamond");
+                    $inv->addItem($item);
                     return true;
                 case "cdate":
-                    $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE DATE IS " . $date);
+                    $sender->sendMessage(Main::PREFIX . TextFormat::RED . TextFormat::BOLD . "THE DATE IS " . $date);
                     return true;
+                case "kit test":
+                    $sender->addTitle(TextFormat::RED . TextFormat::BOLD . "KIT TEST");
+                    $item = Item::get(264,0,100);
+                    $inv = $sender->getInventory();
+                    $item->setCustomName("Diamond");
+                    $inv->addItem($item);
+                    $item = Item::get(1,0,100);
+                    $inv = $sender->getInventory();
+                    $item->setCustomName("Stone");
+                    $inv->addItem($item);
+                    return true;
+
             }
         }
     }
@@ -62,4 +73,3 @@ class Main extends PluginBase implements Listener {
         $this->getLogger()->info(Main::PREFIX . "Oml");
     }
 }
-
