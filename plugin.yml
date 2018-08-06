@@ -13,3 +13,6 @@ commands:
  ctime:
   description: "Check the time."
   usage: "/ctime"
+ kit test:
+  description: "kit test"
+  usage: "/kit test"
