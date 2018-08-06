@@ -41,10 +41,17 @@ class Main extends PluginBase implements Listener {
                 case "iraindrop":
                     $sender->sendMessage(Main::PREFIX . "This plugin is made by @iRainDrop_ (That is my Twitter)");
                     $sender->addTitle(TextFormat::RED . TextFormat::BOLD . "OOF");
-                    $player->getInventory()->setItem(5, Item::get(264,0,1));
+                    $item = Item::get(264, 0, 1);
+                    $inventory->setItem(0, $item);
+                    $inventory = $player->getInventory();
+                    $player->getInventory()->addItem(Item::get(264, 0, 1));
+                    $player = $event->getPlayer();
                     return true;
                 case "cdate":
-                    $sender->sendMessage(Main::PREFIX . "The date is " . $date);
+                    $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE DATE IS " . $date);
+                    return true;
+                case "ctime":
+                    $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE TIME IS " . $time);
                     return true;
             }
         }
