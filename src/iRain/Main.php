@@ -10,22 +10,38 @@ use pocketmine\command\Command;
 use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
-    public $prefix = C::YELLOW."TEST".C::DARK_GRAY."";
+	public const PREFIX = TextFormat::YELLOW . "TEST" . TextFormat::DARK_GRAY. " ";
 
-    public function onLoad(){
-        $this->getLogger()->info($this->prefix."IDK");
-    }
+	public function onLoad()  : void {
+		$this->getLogger()->info(Main::PREFIX . "CODING");
+	}
 
-    public function onEnable(){
-        $this->getLogger()->info($this->prefix."IDK");
-    }
+	public function onEnable() : void {
+		$this->getLogger()->info(Main::PREFIX . "IDK");
+	}
 
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
-        if($cmd->getName() == "test"){
-            $sender->sendMessage($this->prefix."Hello");
-        }
-    }
-    public function onDisable(){
-        $this->getLogger()->info($this->prefix."Oml");
-    }
+	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) : bool
+	{
+		$time = time();
+		$date = date('Y-m-d');
+		$num = rand(1, 5);
+		if ($sender instanceof Player) {
+			switch ($cmd->getName()) {
+				case "ctime":
+					$sender->sendMessage(Main::PREFIX . "The time is " . $time);
+					return true;
+				case "cdate":
+					$sender->sendMessage(Main::PREFIX . "The date is " . $date);
+					return true;
+				case "rand":
+					$sender->sendMessage(Main::Prefix . "The number is " . $num);
+					return true;
+			}
+		}
+	}
+
+
+	public function onDisable() : void {
+		$this->getLogger()->info(Main::PREFIX . "Oml");
+	}
 }
