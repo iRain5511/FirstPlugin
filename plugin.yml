@@ -2,7 +2,11 @@ name: iRain
 main: iRain\Main
 version: 1.0.0
 api: 3.1.2
-test:
-  usage: "/test"
-  description: "Testing command!"
-  permission: "myplugin.testcommand"
+
+commands:
+ iraindrop:
+  description: "Check the time"
+  usage: "/iraindrop"
+ ctime:
+  description: "Check the time"
+  usage: "/ctime"
