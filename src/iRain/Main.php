@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener {
         $this->getLogger()->info($this->prefix."IDK");
     }
 
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         if($cmd->getName() == "test"){
             $sender->sendMessage($this->prefix."Hello");
         }
@@ -29,3 +29,4 @@ class Main extends PluginBase implements Listener {
         $this->getLogger()->info($this->prefix."Oml");
     }
 }
+
