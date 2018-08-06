@@ -38,6 +38,9 @@ class Main extends PluginBase implements Listener {
         $date = date('Y-m-d');
         if ($sender instanceof Player) {
             switch ($cmd->getName()) {
+                case "ctime":
+                    $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE TIME IS " . $time);
+                    return true;
                 case "iraindrop":
                     $sender->sendMessage(Main::PREFIX . "This plugin is made by @iRainDrop_ (That is my Twitter)");
                     $sender->addTitle(TextFormat::RED . TextFormat::BOLD . "OOF");
@@ -50,9 +53,6 @@ class Main extends PluginBase implements Listener {
                 case "cdate":
                     $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE DATE IS " . $date);
                     return true;
-                case "ctime":
-                    $sender->sendMessage(Main::PREFIX . TextFormat::RED  . TextFormat::BOLD . "THE TIME IS " . $time);
-                    return true;
             }
         }
     }
@@ -62,3 +62,4 @@ class Main extends PluginBase implements Listener {
         $this->getLogger()->info(Main::PREFIX . "Oml");
     }
 }
+
