@@ -5,8 +5,11 @@ api: 3.1.2
 
 commands:
  iraindrop:
-  description: "Check the time"
+  description: "iRainDrop is cool."
   usage: "/iraindrop"
+ cdate:
+  description: "Check the date."
+  usage: "/cdate"
  ctime:
-  description: "Check the time"
+  description: "Check the time."
   usage: "/ctime"
