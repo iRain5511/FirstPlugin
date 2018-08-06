@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace iRain;
 
 use pocketmine\plugin\PluginBase;
@@ -29,6 +31,6 @@ class Main extends PluginBase implements Listener {
     }
 
     public function onDisable()
-        $this->getLogger()->info($this->prefix. "Oml");
+        $this->getLogger()->info($this->prefix."Oml");
     }
 }
