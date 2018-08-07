@@ -7,5 +7,5 @@ commands:
     description: "Check the time"
   cdate:
     description: "Check the date"
-  random:
-    description: "Generates a random number from 1-10"
+  ping:
+    description: "Check your ping"
