@@ -16,3 +16,6 @@ commands:
  kit test:
   description: "kit test"
   usage: "/kit test"
+ ping:
+  description: "Check your ping."
+  usage: "/ping"
