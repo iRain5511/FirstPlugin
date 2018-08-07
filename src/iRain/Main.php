@@ -70,7 +70,7 @@ class Main extends PluginBase implements Listener {
 					$inv->addItem($item);
 					return true;
 				case "ping":
-					$sender->sendMessage(Main::PREFIX . TextFormat::GREEN . "Your ping is " . $sender->getPing() . "ms");
+					$sender->sendMessage(TextFormat::RED . TextFormat::BOLD  .  "YOUR PING IS " . $sender->getPing() . "MS");
 					return true;
 			}
 		} else {

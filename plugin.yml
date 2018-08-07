@@ -3,9 +3,18 @@ main: iRain\Main
 version: 1.0.0
 api: [3.0.0, 4.0.0]
 commands:
-  ctime:
-    description: "Check the time"
-  cdate:
-    description: "Check the date"
-  ping:
-    description: "Check your ping"
+ iraindrop:
+  description: "iRainDrop is cool."
+  usage: "/iraindrop"
+ cdate:
+  description: "Check the date."
+  usage: "/cdate"
+ ctime:
+  description: "Check the time."
+  usage: "/ctime"
+ kit test:
+  description: "kit test"
+  usage: "/kit test"
+ ping:
+  description: "Check your ping."
+  usage: "/ping"
