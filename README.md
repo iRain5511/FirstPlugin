@@ -1,2 +1,2 @@
 # FirstPlugin
-This is my first plugin
+Not my first plugin!
